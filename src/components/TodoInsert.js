@@ -11,7 +11,11 @@ function TodoInsert({ onInsert }) {
 
   const onSubmit = useCallback(
     (e) => {
-      onInsert(value);
+      if (value !== '') {
+        onInsert(value);
+      } else {
+        alert('아무것도 입력되지 않았습니다.');
+      }
       setValue(''); // value 값 초기화
 
       // submit 이벤트는 브라우저에서 새로고침을 발생시키므로 방지하기 위해서
