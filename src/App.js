@@ -6,13 +6,13 @@ import React, { useReducer, useRef, useCallback } from 'react';
 
 function createBulkTodos() {
   const array = [];
-  for (let i = 1; i <= 2500; i++) {
-    array.push({
-      id: i,
-      text: `할일 ${i}`,
-      checked: false,
-    });
-  }
+  // for (let i = 1; i <= 2500; i++) {
+  //   array.push({
+  //     id: i,
+  //     text: `할일 ${i}`,
+  //     checked: false,
+  //   });
+  // }
   return array;
 }
 
@@ -32,11 +32,9 @@ function todoReducer(todos, action) {
 }
 
 function App() {
-  const [todos, dispatch] = React.useReducer(
-    todoReducer,
-    undefined,
-    createBulkTodos,
-  );
+  const [todos, dispatch] = React.useReducer(todoReducer, undefined, () => {
+    return [];
+  });
 
   const nextId = useRef(2501);
 
