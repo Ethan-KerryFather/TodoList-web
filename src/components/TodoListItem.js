@@ -5,6 +5,7 @@ import {
 } from 'react-icons/md';
 import cn from 'classnames';
 import './TodoListItem.scss';
+import React from 'react';
 
 function TodoListItem({ todo, onRemove, onToggle }) {
   // 구조분해할당
@@ -33,4 +34,4 @@ function TodoListItem({ todo, onRemove, onToggle }) {
   );
 }
 
-export default TodoListItem;
+export default React.memo(TodoListItem);
