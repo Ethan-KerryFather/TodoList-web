@@ -1,4 +1,4 @@
-<h1>[Todo List] 투두앱</h1>
+<h1>[Todo List] 투두리스트</h1>
 <pre>
   <h3>Personal project [2022-6 ~ 2022-6]</h3>
 
